@@ -26,65 +26,9 @@ Crie a classe Main em outro pacote e teste as funções da classe FuncoesUteis.
 
 ### 📋 Pré-requisitos
 
-package uteis;
+![Triângulo](https://github.com/user-attachments/assets/08943b10-7447-4898-93f2-1ad44128163a)
+![Triângulo2](https://github.com/user-attachments/assets/51101223-a593-42dd-865a-f50c9cbed100)
 
-import java.io.FileReader;
-import java.io.BufferedReader;
-import java.io.IOException;
-
-public class FuncoesUteis {
-
-    
-    public int Soma(int a, int b) { //Aqui começo usando o método que retorna a soma de dois números     
-        return a + b;
-    }
-
-    
-    public void Triangulo(int altura) { // E aqui uso o método que imprime um triângulo com altura definida
-        for (int i = 1; i <= altura; i++) {
-            for (int j = 1; j <= i; j++) {
-                System.out.print("x");
-            }
-            System.out.println(); 
-        }
-    }
-
-    
-    public void printArquivo(String nomeArquivo) { //Aqui o método que lê o conteúdo de um arquivo e imprime na tela
-        try {
-            FileReader fr = new FileReader(nomeArquivo);
-            BufferedReader br = new BufferedReader(fr);
-            String linha;
-            while ((linha = br.readLine()) != null) {
-                System.out.println(linha);
-            }
-            br.close(); // Fechando o arquivo
-        } catch (IOException e) {
-            System.out.println("Erro ao abrir o arquivo: " + e.getMessage());
-        }
-    }
-}
-///////////////////////////////////////////////////////////////////////////////////////
-package main;
-
-import uteis.FuncoesUteis;
-
-public class Main {
-    public static void main(String[] args) {
-        FuncoesUteis util = new FuncoesUteis();
-        
-      
-        int resultado = util.Soma(3, 7);  //Aqui estou testando o método de soma
-        System.out.println("Soma: " + resultado);
-        
-        
-        System.out.println("Triângulo de altura 4:"); //Aqui o método do triângulo
-        util.Triangulo(4);
-        
-        
-        System.out.println("Conteúdo do arquivo 'teste.txt':"); // E por último testo o método de imprimir o arquivo (assumindo que existe um arquivo chamado "teste.txt")
-        util.printArquivo("teste.txt");
-    }
 
 ### 🔧 Instalação
 
